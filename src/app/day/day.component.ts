@@ -7,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DayComponent implements OnInit {
 
-  @Input() displayName: string = '';
-  @Input() isCurrentDay: boolean = false;
+  @Input() displayName = '';
+  @Input() isCurrentDay = false;
 
   constructor() { }
 
