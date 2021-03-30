@@ -1,0 +1,7 @@
+<div class="week" *ngIf="weekDays | async as weekdays">
+  <app-day
+    *ngFor="let weekday of weekdays"
+    [displayName]= weekday.name
+    [isCurrentDay]= weekday.isCurrentDay
+  ></app-day>
+</div>
