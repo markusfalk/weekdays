@@ -42,8 +42,14 @@ describe('DayComponent', () => {
     expect(day.textContent).toContain('Monday');
   });
 
-  it('should highlight current day', () => {
+  it('should highlight current day when input is true', () => {
     expect(day).toHaveClass('current');
+  });
+
+  it('should not highlight current day when input is false', () => {
+    componentHost.today = false;
+    fixture.detectChanges();
+    expect(day).not.toHaveClass('current');
   });
 
 });
